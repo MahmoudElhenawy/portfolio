@@ -825,6 +825,122 @@
             font-size: 1rem;
         }
 
+        /* Project Demo Modal */
+        .demo-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .demo-modal.active {
+            display: flex;
+        }
+
+        .demo-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            background: var(--secondary-dark);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            animation: slideUp 0.4s ease;
+            overflow-y: auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .demo-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .demo-modal-header h3 {
+            font-size: 2rem;
+            color: var(--accent-green);
+        }
+
+        .demo-modal-close {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .demo-modal-close:hover {
+            background: var(--accent-green);
+            transform: rotate(90deg);
+        }
+
+        .demo-images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .demo-image-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .demo-image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.2);
+            border-color: var(--accent-green);
+        }
+
+        .demo-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .demo-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            color: var(--white);
+            padding: 1.5rem 1rem 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -911,6 +1027,19 @@
             .container {
                 padding: 0 1rem;
             }
+
+            .demo-modal-content {
+                max-width: 95%;
+                padding: 1.5rem;
+            }
+
+            .demo-modal-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .demo-images-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -966,6 +1095,10 @@
                             <img src="profile.jpeg"
                                  alt="Mahmoud Elhenawy smiling gently, facing forward in a well-lit professional portrait. The background is softly blurred, creating a calm and welcoming atmosphere. The initials M E are displayed as a placeholder if the image does not load."
                                  style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                            <div class="placeholder initials">M.E</div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-element"></div>
                             <div class="floating-element"></div>
                             <div class="floating-element"></div>
                             <div class="floating-element"></div>
@@ -1042,12 +1175,22 @@
             <h2 class="section-title fade-in">Featured Projects</h2>
             <div class="timeline fade-in">
                 <div class="timeline-item glass-card">
+                    <h3>Krakebic - Recycling Connection App</h3>
+                    <div class="date">Flutter Project</div>
+                    <p>A mobile application that connects users with recycling providers, featuring waste classification, price estimation, and convenient doorstep pickup scheduling for recyclable materials. Built with Flutter's modern architecture and user-centric design principles.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/nhahub/NHA-228" class="project-link" target="_blank">GitHub</a>
+                        <a href="#" class="project-link demo-link" data-project="krakebic">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item glass-card">
                     <h3>Bookly - Mobile Reading App</h3>
                     <div class="date">Flutter Project</div>
                     <p>A comprehensive Flutter mobile application for browsing and reading books, featuring seamless API integration, advanced state management using Bloc pattern, and an intuitive, user-friendly interface. Implemented clean architecture principles and responsive design for optimal user experience across devices.</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="https://github.com/MahmoudElhenawy/Bookly_App" class="project-link" target="_blank">GitHub</a>
+                        <a href="#" class="project-link demo-link" data-project="bookly">Live Demo</a>
                     </div>
                 </div>
                 
@@ -1056,18 +1199,8 @@
                     <div class="date">Flutter Project</div>
                     <p>A sophisticated Flutter e-commerce application for browsing fashion products, managing shopping cart functionality, and completing secure checkout with integrated Visa payment processing. Features advanced state management, real-time data synchronization, and modern UI/UX design principles.</p>
                     <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item glass-card">
-                    <h3>Krakebic - Recycling Connection App</h3>
-                    <div class="date">Flutter Project</div>
-                    <p>A mobile application that connects users with recycling providers, featuring waste classification, price estimation, and convenient doorstep pickup scheduling for recyclable materials. Built with Flutter's modern architecture and user-centric design principles.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="https://github.com/MahmoudElhenawy/open_fashion" class="project-link" target="_blank">GitHub</a>
+                        <a href="#" class="project-link demo-link" data-project="openfashion">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -1148,7 +1281,107 @@
         </div>
     </footer>
 
+    <!-- Project Demo Modal -->
+    <div class="demo-modal" id="demoModal">
+        <div class="demo-modal-content">
+            <div class="demo-modal-header">
+                <h3 id="modalProjectTitle"></h3>
+                <button class="demo-modal-close" onclick="closeDemoModal()">×</button>
+            </div>
+            <div class="demo-images-grid" id="demoImagesGrid"></div>
+        </div>
+    </div>
+
     <script>
+        // Project demo data with images
+        const projectDemos = {
+            krakebic: {
+                title: 'Krakebic - Recycling Connection App',
+                images: [
+                    { url: 'karacebic.png', caption: 'Home Screen - Browse recycling options' },
+                    { url: 'karacebic.png', caption: 'Waste Classification - Identify recyclables' },
+                    { url: 'karacebic.png', caption: 'Price Estimation - Calculate value' },
+                    { url: 'karacebic.png', caption: 'Pickup Scheduling - Book collection' }
+                ]
+            },
+            bookly: {
+                title: 'Bookly - Mobile Reading App',
+                images: [
+                    { url: 'bookly.png', caption: 'Home Screen - Featured books' },
+                    { url: 'bookly.png', caption: 'Book Details - View information' },
+                    { url: 'bookly.png', caption: 'Reading Interface - Immersive experience' },
+                    { url: 'bookly.png', caption: 'Library - Your collection' }
+                ]
+            },
+            openfashion: {
+                title: 'Open Fashion - E-commerce App',
+                images: [
+                    { url: 'open_fashin.png', caption: 'Home - Latest trends' },
+                    { url: 'open_fashin.png', caption: 'Browse - Explore products' },
+                    { url: 'open_fashin.png', caption: 'Shopping Cart - Review items' },
+                    { url: 'open_fashin.png', caption: 'Checkout - Secure payment' }
+                ]
+            }
+        };
+
+        // Open demo modal
+        function openDemoModal(projectKey) {
+            const modal = document.getElementById('demoModal');
+            const title = document.getElementById('modalProjectTitle');
+            const imagesGrid = document.getElementById('demoImagesGrid');
+            
+            const project = projectDemos[projectKey];
+            if (!project) return;
+            
+            title.textContent = project.title;
+            imagesGrid.innerHTML = '';
+            
+            project.images.forEach(img => {
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'demo-image-container';
+                imageContainer.innerHTML = `
+                    <img src="${img.url}" alt="${img.caption}">
+                    <div class="demo-image-caption">${img.caption}</div>
+                `;
+                imagesGrid.appendChild(imageContainer);
+            });
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close demo modal
+        function closeDemoModal() {
+            const modal = document.getElementById('demoModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('demoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDemoModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDemoModal();
+            }
+        });
+
+        // Add event listeners to demo links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.demo-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectKey = this.getAttribute('data-project');
+                    openDemoModal(projectKey);
+                });
+            });
+        });
+
         // Create floating particles
         function createParticles() {
             const particlesContainer = document.querySelector('.hero-particles');
@@ -1260,21 +1493,6 @@
         // Initialize particles
         createParticles();
 
-        // Add typing effect to hero title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function typing() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typing, speed);
-                }
-            }
-            typing();
-        }
-
         // Enhanced hover effects for skill tags
         document.querySelectorAll('.skill-tag').forEach(tag => {
             tag.addEventListener('mouseenter', function() {
@@ -1307,8 +1525,4 @@
         });
     </script>
 </body>
-</html>placeholder">M.E</div>
-                        </div>
-                        <div class="floating-elements">
-                            <div class="floating-element"></div>
-                            <div class="
+</html>
