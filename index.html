@@ -37,7 +37,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -202,12 +201,8 @@
                 transform: translateY(100vh) translateX(0px) rotate(0deg);
                 opacity: 0;
             }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
             100% {
                 transform: translateY(-100px) translateX(100px) rotate(360deg);
                 opacity: 0;
@@ -276,9 +271,7 @@
             transition: left 0.5s;
         }
 
-        .btn:hover::before {
-            left: 100%;
-        }
+        .btn:hover::before { left: 100%; }
 
         .btn:hover {
             transform: translateY(-3px);
@@ -374,17 +367,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 25% 25%, rgba(31, 125, 83, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
                 linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
 
-        .about .container {
-            position: relative;
-            z-index: 1;
-        }
+        .about .container { position: relative; z-index: 1; }
 
         .about-content {
             display: grid;
@@ -393,15 +383,9 @@
             align-items: center;
         }
 
-        .about-image {
-            text-align: center;
-            position: relative;
-        }
+        .about-image { text-align: center; position: relative; }
 
-        .profile-container {
-            position: relative;
-            display: inline-block;
-        }
+        .profile-container { position: relative; display: inline-block; }
 
         .profile-image {
             width: 280px;
@@ -443,10 +427,7 @@
             animation: rotate 8s linear infinite;
         }
 
-        .profile-image .initials {
-            position: relative;
-            z-index: 1;
-        }
+        .profile-image .initials { position: relative; z-index: 1; }
 
         @keyframes rotate {
             0% { transform: rotate(0deg); }
@@ -500,9 +481,7 @@
             margin-top: 4rem;
         }
 
-        .skill-category {
-            position: relative;
-        }
+        .skill-category { position: relative; }
 
         .skill-category h3 {
             color: var(--accent-green);
@@ -542,9 +521,7 @@
             transition: left 0.3s ease;
         }
 
-        .skill-tag:hover::before {
-            left: 0;
-        }
+        .skill-tag:hover::before { left: 0; }
 
         .skill-tag:hover {
             transform: translateY(-2px);
@@ -552,15 +529,11 @@
             box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
         }
 
-        /* Timeline */
-        .experience {
-            background: var(--secondary-dark);
-        }
+        /* Experience */
+        .experience { background: var(--secondary-dark); }
 
         /* Projects Section */
-        .projects {
-            background: var(--primary-dark);
-        }
+        .projects { background: var(--primary-dark); }
 
         .timeline {
             position: relative;
@@ -634,9 +607,7 @@
         }
 
         /* Education */
-        .education-item {
-            margin-bottom: 2rem;
-        }
+        .education-item { margin-bottom: 2rem; }
 
         .education-item h3 {
             color: var(--text-primary);
@@ -666,10 +637,8 @@
         .contact::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
         }
 
@@ -743,9 +712,7 @@
         }
 
         .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: var(--text-muted);
-        }
+        .contact-form textarea::placeholder { color: var(--text-muted); }
 
         .contact-form button {
             padding: 1.5rem 2rem;
@@ -774,13 +741,13 @@
         }
 
         .social-links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 60px;
             height: 60px;
             background: var(--gradient-2);
             color: var(--white);
-            text-align: center;
-            line-height: 60px;
             border-radius: 50%;
             text-decoration: none;
             transition: all 0.4s ease;
@@ -792,19 +759,15 @@
         .social-links a::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(255, 255, 255, 0.2);
             transform: scale(0);
             transition: transform 0.3s ease;
             border-radius: 50%;
         }
 
-        .social-links a:hover::before {
-            transform: scale(1);
-        }
+        .social-links a:hover::before { transform: scale(1); }
 
         .social-links a:hover {
             transform: translateY(-5px) scale(1.1);
@@ -825,14 +788,12 @@
             font-size: 1rem;
         }
 
-        /* Project Demo Modal */
+        /* Demo Modal */
         .demo-modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.9);
             z-index: 10000;
             align-items: center;
@@ -841,9 +802,7 @@
             animation: fadeIn 0.3s ease;
         }
 
-        .demo-modal.active {
-            display: flex;
-        }
+        .demo-modal.active { display: flex; }
 
         .demo-modal-content {
             position: relative;
@@ -857,21 +816,8 @@
             overflow-y: auto;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { 
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+        @keyframes slideUp { from{opacity:0;transform:translateY(50px)} to{opacity:1;transform:translateY(0)} }
 
         .demo-modal-header {
             display: flex;
@@ -886,8 +832,7 @@
         }
 
         .demo-modal-close {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             background: rgba(255, 255, 255, 0.1);
             border: none;
             border-radius: 50%;
@@ -923,17 +868,11 @@
             border-color: var(--accent-green);
         }
 
-        .demo-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+        .demo-image-container img { width: 100%; height: auto; display: block; }
 
         .demo-image-caption {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
             color: var(--white);
             padding: 1.5rem 1rem 1rem;
@@ -943,14 +882,8 @@
 
         /* Animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(50px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .fade-in {
@@ -964,87 +897,29 @@
             transform: translateY(0);
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-
-            .hero-content .subtitle {
-                font-size: 1.4rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline {
-                padding-left: 2rem;
-            }
-
-            .timeline-item {
-                margin-left: 2rem;
-            }
-
-            .timeline-item::before {
-                left: -3.5rem;
-            }
-
-            .profile-image {
-                width: 220px;
-                height: 220px;
-                font-size: 3rem;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .demo-modal-content {
-                max-width: 95%;
-                padding: 1.5rem;
-            }
-
-            .demo-modal-header h3 {
-                font-size: 1.5rem;
-            }
-
-            .demo-images-grid {
-                grid-template-columns: 1fr;
-            }
+            .nav-links { display: none; }
+            .mobile-menu { display: flex; }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-content .subtitle { font-size: 1.4rem; }
+            .about-content { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .contact-content { grid-template-columns: 1fr; gap: 3rem; }
+            .btn-outline { margin-left: 0; margin-top: 1rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .timeline { padding-left: 2rem; }
+            .timeline-item { margin-left: 2rem; }
+            .timeline-item::before { left: -3.5rem; }
+            .profile-image { width: 220px; height: 220px; font-size: 3rem; }
+            .section-title { font-size: 2.5rem; }
+            .container { padding: 0 1rem; }
+            .demo-modal-content { max-width: 95%; padding: 1.5rem; }
+            .demo-modal-header h3 { font-size: 1.5rem; }
+            .demo-images-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
     <div class="bg-animation"></div>
 
     <!-- Navigation -->
@@ -1061,30 +936,26 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-particles"></div>
         <div class="hero-content">
             <h1>Mahmoud Elhenawy</h1>
             <div class="subtitle">Flutter Developer</div>
-            <p>Enthusiastic Flutter developer dedicated to crafting responsive, user-friendly applications. 
+            <p>Enthusiastic Flutter developer dedicated to crafting responsive, user-friendly applications.
                Eager to contribute to innovative projects in a collaborative work environment.</p>
             <a href="#contact" class="btn">Contact Me</a>
-            <a href="https://drive.google.com/file/d/10_j105jiXlJ-LzRm_XPrhD7ambVDGWsv/view?usp=drive_link" 
-               class="btn btn-outline" target="_blank">
-               Download CV
-            </a>
+            <a href="https://drive.google.com/file/d/1QzRDGdhSPyZ3ajMKWN5PTzW1fX_Ni51j/view?usp=sharing"
+               class="btn btn-outline" target="_blank">Download CV</a>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
@@ -1092,9 +963,9 @@
                 <div class="about-image">
                     <div class="profile-container">
                         <div class="profile-image">
-                            <img src="profile.jpeg"
-                                 alt="Mahmoud Elhenawy smiling gently, facing forward in a well-lit professional portrait. The background is softly blurred, creating a calm and welcoming atmosphere. The initials M E are displayed as a placeholder if the image does not load."
-                                 style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                            <img src="profile.jpeg" alt="Mahmoud Elhenawy"
+                                 style="display:none;"
+                                 onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
                             <div class="placeholder initials">M.E</div>
                         </div>
                         <div class="floating-elements">
@@ -1108,51 +979,48 @@
                 <div class="about-text">
                     <p>I'm a passionate Flutter developer currently pursuing my degree in Information Systems and Computer Science with a focus on AI at October 6 University. My journey in mobile development has equipped me with strong technical skills and a keen eye for creating intuitive user experiences.</p>
                     <p>I specialize in building cross-platform mobile applications using Flutter and Dart, with experience in state management, API integration, and modern development practices. I'm always eager to learn new technologies and contribute to innovative projects that make a difference.</p>
-                    <p>Based in Cairo, Egypt, I'm currently expanding my skills through hands-on training and real-world projects, always striving to deliver high-quality, user-friendly applications.</p>
+                    <p>Based in Cairo, Egypt. Currently working remotely as a Flutter Developer Intern at GravilLog (Dubai, UAE), applying clean architecture and collaborating in an agile team to ship real products.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <h2 class="section-title fade-in">Skills &amp; Expertise</h2>
             <div class="skills-grid">
                 <div class="glass-card skill-category fade-in">
-                    <h3>Programming & Frameworks</h3>
+                    <h3>Programming &amp; Frameworks</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Flutter</span>
                         <span class="skill-tag">Dart</span>
                         <span class="skill-tag">Object-Oriented Programming</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
                     <h3>State Management</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Bloc</span>
                         <span class="skill-tag">Cubit</span>
                         <span class="skill-tag">Provider</span>
+                        <span class="skill-tag">GetX</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
-                    <h3>Architecture & Design Patterns</h3>
+                    <h3>Architecture &amp; Design Patterns</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">MVVM</span>
                         <span class="skill-tag">Clean Architecture</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
-                    <h3>Backend & APIs</h3>
+                    <h3>Backend &amp; APIs</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">RESTful APIs</span>
                         <span class="skill-tag">Firebase</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
                     <h3>Local Storage</h3>
                     <div class="skill-tags">
@@ -1160,22 +1028,19 @@
                         <span class="skill-tag">Shared Preferences</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
-                    <h3>UI/UX & Design</h3>
+                    <h3>UI/UX &amp; Design</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Responsive Design</span>
                         <span class="skill-tag">Figma</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
-                    <h3>Testing & Tools</h3>
+                    <h3>Testing &amp; Tools</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Postman</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
                     <h3>Version Control</h3>
                     <div class="skill-tags">
@@ -1183,14 +1048,12 @@
                         <span class="skill-tag">GitHub</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
-                    <h3>Machine Learning & AI</h3>
+                    <h3>Machine Learning &amp; AI</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">TensorFlow Lite (TFLite)</span>
                     </div>
                 </div>
-                
                 <div class="glass-card skill-category fade-in">
                     <h3>Soft Skills</h3>
                     <div class="skill-tags">
@@ -1212,27 +1075,39 @@
         <div class="container">
             <h2 class="section-title fade-in">Professional Experience</h2>
             <div class="timeline fade-in">
+
+                <!-- GravilLog — NEW -->
+                <div class="timeline-item glass-card">
+                    <h3>Flutter Developer Intern</h3>
+                    <div class="date">February 2026 – Present</div>
+                    <p><strong>GravilLog, Dubai, UAE (Remote)</strong></p>
+                    <p>Developing cross-platform mobile applications using Flutter, integrating REST APIs, applying clean architecture principles, and collaborating within an agile development team. Working remotely with an international team based in Dubai, UAE.</p>
+                </div>
+
+                <!-- DEPI -->
                 <div class="timeline-item glass-card">
                     <h3>Flutter Trainee</h3>
                     <div class="date">June 2025 – December 2025</div>
                     <p><strong>DEPI, Alexandria</strong></p>
-                    <p>Hands-on training in Flutter & Dart, building interactive mobile apps with API and Firebase integration, and applying state management (Cubit/Bloc) in real projects. Gained practical experience in modern mobile development practices and agile development methodologies.</p>
+                    <p>Hands-on training in Flutter &amp; Dart, building interactive mobile apps with API and Firebase integration, and applying state management (Cubit/Bloc) in real projects. Gained practical experience in modern mobile development practices and agile development methodologies.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title fade-in">Featured Projects</h2>
             <div class="timeline fade-in">
+
                 <div class="timeline-item glass-card">
                     <h3>Krakebic - Recycling Connection App</h3>
                     <div class="date">Flutter Project</div>
                     <p>A mobile application that connects users with recycling providers, featuring waste classification, price estimation, and convenient doorstep pickup scheduling for recyclable materials. Built with Flutter's modern architecture and user-centric design principles.</p>
                     <div class="project-links">
-                        <a href="https://github.com/nhahub/NHA-228" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://github.com/MahmoudElhenawy/krakebic" class="project-link" target="_blank">GitHub</a>
                         <a href="#" class="project-link demo-link" data-project="krakebic">Live Demo</a>
                     </div>
                 </div>
@@ -1246,7 +1121,7 @@
                         <a href="#" class="project-link demo-link" data-project="bookly">Live Demo</a>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item glass-card">
                     <h3>Open Fashion - E-commerce App</h3>
                     <div class="date">Flutter Project</div>
@@ -1256,16 +1131,17 @@
                         <a href="#" class="project-link demo-link" data-project="openfashion">Live Demo</a>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item glass-card">
                     <h3>Ishara - Sign Language Learning App</h3>
                     <div class="date">Flutter Project</div>
                     <p>An educational Flutter application designed to help children learn sign language through interactive exercises. Features real-time camera integration and AI-powered validation using TensorFlow Lite to recognize and validate letters and words in sign language, providing instant feedback for learners.</p>
                     <div class="project-links">
-                        <a href="https://github.com/MahmoudElhenawy/ishara" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://github.com/mostafaomeha725/IsharaApp" class="project-link" target="_blank">GitHub</a>
                         <a href="#" class="project-link demo-link" data-project="ishara">Live Demo</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1356,233 +1232,137 @@
     </div>
 
     <script>
-        // Project demo data with images
         const projectDemos = {
             krakebic: {
                 title: 'Krakebic - Recycling Connection App',
-                images: [
-                    { url: 'karacebic.png', caption: 'Krakebic App Screenshot' }
-                ]
+                images: [{ url: 'karacebic.png', caption: 'Krakebic App Screenshot' }]
             },
             bookly: {
                 title: 'Bookly - Mobile Reading App',
-                images: [
-                    { url: 'bookly.png', caption: 'Bookly App Screenshot' }
-                ]
+                images: [{ url: 'bookly.png', caption: 'Bookly App Screenshot' }]
             },
             openfashion: {
                 title: 'Open Fashion - E-commerce App',
-                images: [
-                    { url: 'open_fashin.png', caption: 'Open Fashion App Screenshot' }
-                ]
+                images: [{ url: 'open_fashin.png', caption: 'Open Fashion App Screenshot' }]
             },
             ishara: {
                 title: 'Ishara - Sign Language Learning App',
-                images: [
-                    { url: 'ishara.png', caption: 'Ishara App Screenshot' }
-                ]
+                images: [{ url: 'ishara.png', caption: 'Ishara App Screenshot' }]
             }
         };
 
-        // Open demo modal
         function openDemoModal(projectKey) {
             const modal = document.getElementById('demoModal');
             const title = document.getElementById('modalProjectTitle');
             const imagesGrid = document.getElementById('demoImagesGrid');
-            
             const project = projectDemos[projectKey];
             if (!project) return;
-            
             title.textContent = project.title;
             imagesGrid.innerHTML = '';
-            
             project.images.forEach(img => {
-                const imageContainer = document.createElement('div');
-                imageContainer.className = 'demo-image-container';
-                imageContainer.innerHTML = `
-                    <img src="${img.url}" alt="${img.caption}">
-                    <div class="demo-image-caption">${img.caption}</div>
-                `;
-                imagesGrid.appendChild(imageContainer);
+                const div = document.createElement('div');
+                div.className = 'demo-image-container';
+                div.innerHTML = `<img src="${img.url}" alt="${img.caption}"><div class="demo-image-caption">${img.caption}</div>`;
+                imagesGrid.appendChild(div);
             });
-            
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        // Close demo modal
         function closeDemoModal() {
-            const modal = document.getElementById('demoModal');
-            modal.classList.remove('active');
+            document.getElementById('demoModal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
         document.getElementById('demoModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeDemoModal();
-            }
+            if (e.target === this) closeDemoModal();
         });
 
-        // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeDemoModal();
-            }
+            if (e.key === 'Escape') closeDemoModal();
         });
 
-        // Add event listeners to demo links
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.demo-link').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const projectKey = this.getAttribute('data-project');
-                    openDemoModal(projectKey);
+                    openDemoModal(this.getAttribute('data-project'));
                 });
             });
         });
 
-        // Create floating particles
+        // Particles
         function createParticles() {
-            const particlesContainer = document.querySelector('.hero-particles');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + 'vw';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particlesContainer.appendChild(particle);
+            const container = document.querySelector('.hero-particles');
+            for (let i = 0; i < 50; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.animationDelay = Math.random() * 15 + 's';
+                p.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                container.appendChild(p);
             }
         }
 
-        // Smooth scrolling
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Navbar background on scroll
+        // Navbar scroll
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Enhanced fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
+        // Fade in
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Contact form submission with enhanced feedback
+        // Contact form
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const button = this.querySelector('button');
-            const originalText = button.textContent;
-            
-            button.textContent = 'Sending...';
-            button.style.background = 'var(--gradient-3)';
-            
+            const btn = this.querySelector('button');
+            btn.textContent = 'Sending...';
             setTimeout(() => {
-                button.textContent = 'Message Sent! ✓';
-                button.style.background = 'var(--gradient-2)';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    this.reset();
-                }, 2000);
+                btn.textContent = 'Message Sent! ✓';
+                setTimeout(() => { btn.textContent = 'Send Message'; this.reset(); }, 2000);
             }, 1500);
         });
 
-        // Mobile menu toggle
+        // Mobile menu
         document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            const isVisible = navLinks.style.display === 'flex';
-            
-            navLinks.style.display = isVisible ? 'none' : 'flex';
-            
+            const nav = document.querySelector('.nav-links');
+            const isVisible = nav.style.display === 'flex';
+            nav.style.display = isVisible ? 'none' : 'flex';
             if (!isVisible) {
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'rgba(10, 10, 10, 0.95)';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.padding = '2rem';
-                navLinks.style.backdropFilter = 'blur(20px)';
-                navLinks.style.borderTop = '1px solid rgba(55, 65, 81, 0.3)';
+                Object.assign(nav.style, {
+                    position: 'absolute', top: '100%', left: '0',
+                    width: '100%', background: 'rgba(10,10,10,0.95)',
+                    flexDirection: 'column', padding: '2rem',
+                    backdropFilter: 'blur(20px)',
+                    borderTop: '1px solid rgba(55,65,81,0.3)'
+                });
             }
         });
 
-        // Add parallax effect to background elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.floating-element');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.5 + (index * 0.1);
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        // Initialize particles
-        createParticles();
-
-        // Enhanced hover effects for skill tags
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.05)';
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add glitch effect to profile initials on hover
+        // Profile image hover
         const profileImage = document.querySelector('.profile-image');
         profileImage.addEventListener('mouseenter', function() {
-            this.style.animation = 'none';
             this.style.background = 'var(--gradient-3)';
             this.style.transform = 'scale(1.05)';
         });
-
         profileImage.addEventListener('mouseleave', function() {
             this.style.background = 'var(--gradient-2)';
             this.style.transform = 'scale(1)';
         });
 
-        // Add dynamic color changes to navigation links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.color = 'var(--bright-green)';
-            });
-        });
+        createParticles();
     </script>
 </body>
 </html>
