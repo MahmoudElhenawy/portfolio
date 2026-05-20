@@ -269,6 +269,7 @@
 .avatar-wrapper {
   width: 120px; height: 120px;
   border-radius: 50%;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--green), #00d4ff);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--heading);
@@ -289,6 +290,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
   display: block;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -1471,7 +1473,7 @@ section { padding: 7rem 4rem; position: relative; }
   // Demo modal
   const demos = {
     ishara:      { title: 'Ishara — Sign Language Learning App', images: [{ url: 'ishara.png', caption: 'Ishara App Screenshot' }] },
-    murafik:     { title: 'MURAFIK — Smart Healthcare Monitoring', images: [{ url: 'MURAFIK.JPEG', caption: 'MURAFIK App Screenshot' }] },
+    murafik:     { title: 'MURAFIK — Smart Healthcare Monitoring', images: [{ url: 'MURAFIK.jpeg', caption: 'MURAFIK App Screenshot' }] },
     krakebic:    { title: 'Krakebic — Recycling Connection App', images: [{ url: 'karacebic.png', caption: 'Krakebic App Screenshot' }] },
     openfashion: { title: 'Open Fashion — E-commerce App', images: [{ url: 'open_fashin.png', caption: 'Open Fashion App Screenshot' }] },
     sakina:      { title: 'Sakina — Islamic App', images: [{ url: 'sakina.png', caption: 'Sakina App Screenshot' }] },
